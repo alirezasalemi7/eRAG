@@ -1,6 +1,6 @@
 # eRAG: Evaluating Retrieval Quality in Retrieval-Augmented Generation
 
-This repository contains the codes and packages for the paper titled [Evaluating Retrieval Quality in Retrieval-Augmented Generation]().
+This repository contains the codes and packages for the paper titled [Evaluating Retrieval Quality in Retrieval-Augmented Generation](https://arxiv.org/abs/2404.13781).
 
 Evaluating retrieval-augmented generation (RAG) presents challenges, particularly for retrieval models within these systems. Traditional end-to-end evaluation methods are computationally expensive. Furthermore, evaluation of the retrieval model's performance based on query-document relevance labels shows a small correlation with the RAG system's downstream performance. We propose a novel evaluation approach, \metric, where each document in the retrieval list is individually utilized by the large language model within the RAG system. The output generated for each document is then evaluated based on the downstream task ground truth labels. In this manner, the downstream performance for each document serves as its relevance label. We employ various downstream task metrics to obtain document-level annotations and aggregate them using set-based or ranking metrics. Extensive experiments on a wide range of datasets demonstrate that \metric achieves a higher correlation with downstream RAG performance compared to baseline methods, with improvements in Kendall's $\tau$ correlation ranging from 0.168 to 0.494. Additionally, \metric offers significant computational advantages, improving runtime and consuming up to 50 times less GPU memory than end-to-end evaluation.
 
@@ -139,6 +139,8 @@ results = erag.eval(
 This [Colab notebook](https://colab.research.google.com/drive/1kMPRGowsVse56iGOei2Xaolk_zFw01S_?usp=sharing) is designed to show some examples of how to use eRAG for evaluating retrieval results in a RAG pipeline.
 
 ## Reference
+
+[Evaluating Retrieval Quality in Retrieval-Augmented Generation](https://arxiv.org/abs/2404.13781)
 
 ```
 @misc{salemi2024evaluating,

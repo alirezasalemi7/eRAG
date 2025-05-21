@@ -1,6 +1,6 @@
 # eRAG: Evaluating Retrieval Quality in Retrieval-Augmented Generation
 
-This repository contains the codes and packages for the paper titled [Evaluating Retrieval Quality in Retrieval-Augmented Generation](https://arxiv.org/abs/2404.13781).
+This repository contains the codes and packages for the SIGIR 2025 paper titled [Evaluating Retrieval Quality in Retrieval-Augmented Generation](https://doi.org/10.1145/3626772.3657957).
 
 Evaluating retrieval-augmented generation (RAG) presents challenges, particularly for retrieval models within these systems. Traditional end-to-end evaluation methods are computationally expensive. Furthermore, evaluation of the retrieval model's performance based on query-document relevance labels shows a small correlation with the RAG system's downstream performance. We propose a novel evaluation approach, eRAG, where each document in the retrieval list is individually utilized by the large language model within the RAG system. The output generated for each document is then evaluated based on the downstream task ground truth labels. In this manner, the downstream performance for each document serves as its relevance label. We employ various downstream task metrics to obtain document-level annotations and aggregate them using set-based or ranking metrics. Extensive experiments on a wide range of datasets demonstrate that eRAG achieves a higher correlation with downstream RAG performance compared to baseline methods, with improvements in Kendall's $\tau$ correlation ranging from 0.168 to 0.494. Additionally, eRAG offers significant computational advantages, improving runtime and consuming up to 50 times less GPU memory than end-to-end evaluation.
 
@@ -140,16 +140,24 @@ This [Colab notebook](https://colab.research.google.com/drive/1kMPRGowsVse56iGOe
 
 ## Reference
 
-[Evaluating Retrieval Quality in Retrieval-Augmented Generation](https://arxiv.org/abs/2404.13781)
+[Evaluating Retrieval Quality in Retrieval-Augmented Generation](https://doi.org/10.1145/3626772.3657957)
 
 ```
-@misc{salemi2024evaluating,
-      title={Evaluating Retrieval Quality in Retrieval-Augmented Generation}, 
-      author={Alireza Salemi and Hamed Zamani},
-      year={2024},
-      eprint={2404.13781},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{salemi2024evaluating,
+author = {Salemi, Alireza and Zamani, Hamed},
+title = {Evaluating Retrieval Quality in Retrieval-Augmented Generation},
+year = {2024},
+isbn = {9798400704314},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3626772.3657957},
+doi = {10.1145/3626772.3657957},
+booktitle = {Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+pages = {2395–2400},
+numpages = {6},
+keywords = {evaluation, retrieval quality, retrieval-augmented generation},
+location = {Washington DC, USA},
+series = {SIGIR '24}
 }
 ```
 
